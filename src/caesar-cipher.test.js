@@ -15,3 +15,6 @@ test('encode with capitals', () => {
 test('encode with punctuation', () => {
   expect(caesarCipher.encode('Works, well')).toBe('Xpslt, xfmm')
 })
+test('wrap z to a', () => {
+  expect(caesarCipher.encode('Zoo')).toBe('App')
+})

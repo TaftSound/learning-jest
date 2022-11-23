@@ -17,6 +17,10 @@ function convertToCharCodes (string) {
 function shiftCharCodes (charCodeArray) {
   for (const code in charCodeArray) {
     if (Number.isInteger(charCodeArray[code])) {
+      if (charCodeArray[code] === 90 || charCodeArray[code] === 122) {
+        charCodeArray[code] = charCodeArray[code] - 25
+        continue
+      }
       charCodeArray[code] = charCodeArray[code] + 1
     }
   }
